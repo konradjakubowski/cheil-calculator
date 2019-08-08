@@ -20,6 +20,8 @@ export class App extends Component {
   render() {
     return (
       <div className="calc--container">
+        <Calculator.Screen {...this.props} />
+        <Calculator.Keypad {...this.props} />
       </div>
     );
   }
@@ -27,11 +29,31 @@ export class App extends Component {
 
 const mapStateToProps = state => {
   return {
+    expression: fromCalculator.getExpression(state),
+    total: fromCalculator.getTotal(state),
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
+    calculate: buttonKey => {
+      dispatch(calculate(buttonKey));
+    },
+    delete: () => {
+      dispatch(deleteLastEntry());
+    },
+    clear: () => {
+      dispatch(clear());
+    },
+    evaluate: () => {
+      dispatch(evaluateExpression());
+    },
+    opposite: () => {
+      dispatch(oppositeExpression());
+    },
+    percentage: () => {
+      dispatch(percentageExpression());
+    },
   };
 };
 
