@@ -111,25 +111,14 @@ body {
     font-size: 25px;
   }
 }
-@media all and (max-width: 400px) {
-  .calc--container {
-    width: 315px;
-  }
-  .calc--container .container--screen {
-    flex: 0.4 1;
-  }
-}
-@media all and (max-width: 420px) {
-  .container--keypad .keypad--btn {
-    font-size: 25px;
-  }
-}
+
 @media all and (max-width: 530px) {
   .calc--container {
     width: 350px;
+    height: 70vh;
   }
   .calc--container .container--keypad {
-    flex: 0.6 0.5;
+    flex: 1;
   }
   .container--keypad .keypad--btn {
     font-size: 32px;
@@ -143,10 +132,7 @@ body {
     width: 350px;
     height: 70vh;
   }
-  .calc--container .container--screen {
-    flex: 0.4 1;
-  }
   .calc--container .container--keypad {
-    flex: 0.6 0.5;
+    flex: 1;
   }
 }
