@@ -1,0 +1,152 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: SamsungSharpSans-Regular;
+  src: url(../assets/SamsungSharpSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: SamsungSharpSans-Medium;
+  src: url(../assets/SamsungSharpSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: SamsungSharpSans-Bold;
+  src: url(../assets/SamsungSharpSans-Bold.ttf) format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#root {
+  background-image: url('../assets/calc-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.calc--container {
+  display: flex;
+  flex-direction: column;
+  height: 73vh;
+  width: 20vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1),
+    20px 15px 30px rgba(0, 0, 0, 0.2),
+    -20px 15px 30px rgba(0, 0, 0, 0.2),
+    -20px -15px 30px rgba(0, 0, 0, 0.2),
+    20px -15px 30px rgba(0, 0, 0, 0.2);
+  .container--screen {
+    flex: 0.5 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .container--screen-bottom, .container--screen-top {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    letter-spacing: 3px;
+  }
+  .container--screen-top {
+    color: $top_color;
+    flex: 1.2 1;
+    width: 100%;
+    align-self: flex-end;
+    background: $top_bg_color;
+    font-family: 'SamsungSharpSans-Bold';
+  }
+  .screen--top-inside, .screen--bottom-inside {
+    padding: 10px 40px 0 0;
+  }
+  .screen--top-inside {
+    letter-spacing: 2px;
+    padding-right: 43px;
+  }
+  .screen--bottom-inside {
+    letter-spacing: 3px;
+  }
+  .container--screen-bottom {
+    color: $bottom_color;
+    flex: 1 1;
+    width: 100%;
+    align-self: flex-end;
+    background: $bottom_bg_color;
+    font-family: 'SamsungSharpSans-Regular';
+  }
+  .container--keypad {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .container--keypad-row {
+    flex: 1;
+    display: flex;
+  }
+  .keypad--btn {
+    flex: 1;
+    border: none;
+    background: $white;
+    color: $btn_color;
+    font-size: 35px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'SamsungSharpSans-Regular';
+    &:hover {
+      background: $btn_hover;
+    }
+  }
+  .keypad--btn-gray {
+    background: $btn_gray_bg_color;
+    color: $btn_gray_color;
+    font-family: 'SamsungSharpSans-Medium';
+    &:hover { 
+      background: $btn_gray_hover;
+    }
+  }
+  .keypad--btn-del {
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 400px) {
+  .calc--container {
+    width: 315px;
+  }
+  .calc--container .container--screen {
+    flex: 0.4 1;
+  }
+}
+@media all and (max-width: 420px) {
+  .container--keypad .keypad--btn {
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 530px) {
+  .calc--container {
+    width: 350px;
+  }
+  .calc--container .container--keypad {
+    flex: 0.6 0.5;
+  }
+  .container--keypad .keypad--btn {
+    font-size: 32px;
+  }
+  .container--keypad .keypad--btn-del {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 531px) and (max-width: 1550px) {
+  .calc--container {
+    width: 350px;
+    height: 70vh;
+  }
+  .calc--container .container--screen {
+    flex: 0.4 1;
+  }
+  .calc--container .container--keypad {
+    flex: 0.6 0.5;
+  }
+}
