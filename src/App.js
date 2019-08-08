@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {
+  calculate,
+  clear,
+  deleteLastEntry,
+  evaluateExpression,
+  oppositeExpression,
+  percentageExpression,
+} from './actions/actions';
 import Calculator from './components/calculator';
 import * as fromCalculator from './store';
 import './sass/App.scss';
