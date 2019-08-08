@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://konradjakubowski.github.io/cheil-calculator/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -17,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+ 	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "airbnb"
