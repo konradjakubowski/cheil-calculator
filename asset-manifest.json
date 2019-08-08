@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cheil-calculator/static/css/main.238c2d68.chunk.css",
+    "main.js": "/cheil-calculator/static/js/main.24c32945.chunk.js",
+    "main.js.map": "/cheil-calculator/static/js/main.24c32945.chunk.js.map",
+    "runtime~main.js": "/cheil-calculator/static/js/runtime~main.34b1a255.js",
+    "runtime~main.js.map": "/cheil-calculator/static/js/runtime~main.34b1a255.js.map",
+    "static/js/2.4a6d9eed.chunk.js": "/cheil-calculator/static/js/2.4a6d9eed.chunk.js",
+    "static/js/2.4a6d9eed.chunk.js.map": "/cheil-calculator/static/js/2.4a6d9eed.chunk.js.map",
+    "index.html": "/cheil-calculator/index.html",
+    "precache-manifest.fcff43de99d17cd585a2df554422d5b2.js": "/cheil-calculator/precache-manifest.fcff43de99d17cd585a2df554422d5b2.js",
+    "service-worker.js": "/cheil-calculator/service-worker.js",
+    "static/css/main.238c2d68.chunk.css.map": "/cheil-calculator/static/css/main.238c2d68.chunk.css.map",
+    "static/media/App.scss": "/cheil-calculator/static/media/calc-background.1598acd3.png"
+  }
+}
